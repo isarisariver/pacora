@@ -1,7 +1,7 @@
 const translations = {
   de: {
     dashboard: { 
-      title: 'Dashboard', 
+      title: 'Home', 
       today: 'HEUTE', 
       log_km: 'Distanz (km)', 
       log_time: 'Zeit (hh:mm:ss)', 
@@ -43,7 +43,7 @@ const translations = {
       }
     },
     plan: { 
-      title: 'Trainingsplan', 
+      title: 'Plan', 
       ai: '✨ Optimieren', 
       restart: '🔄 Plan neu starten',
       curr: 'Aktuell',
@@ -64,7 +64,7 @@ const translations = {
       }
     },
     history: { 
-      title: 'Historie', 
+      title: 'Logs', 
       all: 'ALLE LÄUFE',
       records: 'PERSÖNLICHE BESTLEISTUNGEN',
       longest: 'Längster Lauf',
