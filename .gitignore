@@ -1,0 +1,9 @@
+# .gitignore
+.DS_Store
+node_modules/
+.env
+.antigravitycli/
+supabase/.temp/
+backup_v1/
+ai/
+TODO.md
