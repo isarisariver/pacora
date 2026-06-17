@@ -337,9 +337,9 @@ function step4() {
   ).join('');
   frag.appendChild(summary);
 
-  // Pace zones
-  const paces = calcPaces(state.get('fitnessTime'), state.get('goal'));
-  const paceSection = el('div', { style: 'margin-top:1.5rem;' });
+  // Pace zones (don't display during creation)
+  // const paces = calcPaces(state.get('fitnessTime'), state.get('goal'));
+  //const paceSection = el('div', { style: 'margin-top:1.5rem;' });
 
   if (paces) {
     paceSection.innerHTML = `
@@ -386,10 +386,12 @@ function step4() {
         state.set('weeklyGoal', parseInt(recentKm));
       }
       
+      state.set('weekPlan', null);
+
       if (user) {
         await db.saveProfile(user.id);
       }
-      router.go('/dashboard');
+      router.go('/plan');
     }
   }, t('onboarding.create_plan')));
   frag.appendChild(navRow);
