@@ -127,7 +127,11 @@ export const db = {
     return { data, error };
   },
 
-  // ... (deleteRun bleibt gleich)
+  // Einzelnen Lauf löschen
+  async deleteRun(runId) {
+    const { error } = await supabase.from('runs').delete().eq('id', runId);
+    return { error };
+  },
 
   // Run aktualisieren
   async updateRun(runId, run) {
