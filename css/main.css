@@ -54,7 +54,10 @@ html.light {
 
 /* Nav Bar Styling */
 #bottom-nav {
-  position: fixed; bottom: 0; left: 0; right: 0;
+  position: fixed; 
+  bottom: env(safe-area-inset-bottom); 
+  left: 0; 
+  right: 0;
   display: flex; justify-content: center;
   background: var(--bg);
   border-top: 0.5px solid var(--border);
@@ -131,7 +134,7 @@ html, body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-bottom: 70px;
+  padding-bottom: calc(70px + env(safe-area-inset-bottom));
 }
 
 /* ─── Typography ─────────────────────────────────────────── */
